@@ -11,4 +11,12 @@ server.get("/hello", (req: Request, res: Response, next: Next) => {
   return next();
 });
 
+server.get("/q", (req: Request, res: Response, next: Next) => {
+  res.status(400);
+  res.json({
+    message: "hello",
+  });
+
+  return next();
+});
 server.listen(3000, () => console.log("Server is running"));
