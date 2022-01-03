@@ -19,4 +19,11 @@ server.get("/q", (req: Request, res: Response, next: Next) => {
 
   return next();
 });
+
+server.get("/build", (req: Request, res: Response, next: Next) => {
+  res.send({
+    build: "ok",
+  });
+  return next();
+});
 server.listen(3000, () => console.log("Server is running"));
