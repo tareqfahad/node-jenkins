@@ -26,4 +26,11 @@ server.get("/build", (req: Request, res: Response, next: Next) => {
   });
   return next();
 });
+
+server.get("/", (req: Request, res: Response, next: Next) => {
+  res.send({
+    build: "WOW",
+  });
+  return next();
+});
 server.listen(3000, () => console.log("Server is running"));
